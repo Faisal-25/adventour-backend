@@ -26,7 +26,7 @@ app.use("/touristDestinations", touristDestinationsRouter);
 app.use("/users", userRouter);
 app.use("/bookings", bookingRouter);
 
-app.listen(port, async () => {
+app.listen(port, "0.0.0.0" , async () => {
   try {
     await mongoDbConnection;
     console.log("Server started on ", port);
